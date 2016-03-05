@@ -77,6 +77,7 @@ ul{
 .left{
      text-align: right;
 }
+
 /******************************************
 /* LAYOUT                   
 /*******************************************/
@@ -102,6 +103,10 @@ ul{
      font-size: 1.6em;
 }
 
+#preHeaderPhone{
+     padding-left: 10px;
+}
+
 #header{
      height: 200px;
 }
@@ -122,10 +127,6 @@ ul{
      height: 52.5px;
 }
 
-.spacerDiv3{
-     height: 10px;
-}
-
 #navLogoBlock{
      padding: 5px;
 }
@@ -142,6 +143,10 @@ ul{
      font-weight: 300;
      text-transform: uppercase;
      padding: 15px 0px 15px 0px;
+}
+
+#meetEmilyImgDiv{
+     padding: 0px 0px;
 }
 
 #recommendations{
@@ -290,17 +295,32 @@ p{
 /* RESPONSIVE                  
 /*******************************************/
 
-@media only screen (max-width: 767px) {
-
+@media only screen and (max-width: 480px) {
      .centerAlign{
           text-align: center;
+     }
+
+     #homeHeaderBlock{
+          display: none;
+     }
+
+     #navLogoBlock{
+          width: 100%;
+     }
+
+     #rightHeaderBlock{
+          width: 100%;
+     }
+
+     .spacerDiv2{
+          height: 10px;
+     }
+
+     #banner{
+          display: none;
+     }
 }
 
-
-
-@media only screen and (max-width: 420px) {
-
-}
 
 /******************************************
 /* TRASH                 
