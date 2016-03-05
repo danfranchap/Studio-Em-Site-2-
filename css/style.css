@@ -178,6 +178,14 @@ ul{
      background: gray;
 }
 
+#gallery{
+     margin: 20px 0px;
+}
+
+#galleryContainer{
+     max-width: 960px;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES                   
@@ -271,7 +279,7 @@ p{
 }
 
 /******************************************
-/* BOOTSTRAP STYLES                   
+/* BOOTSTRAP & MASONRY STYLES                   
 /*******************************************/
 
 
@@ -291,11 +299,51 @@ p{
      border: none;
 }
 
+.grid-item{
+          margin-bottom: 10px;
+     }
+
+.grid-item-content {
+  height: 100px;
+  background: #D26;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item-content--height2 { height: 200px; }
+
+/******************************************
+/* GALLERY ANIMATION                
+/*******************************************/
+
+/* Effect 2: Move Up */
+.grid.effect-2 .grid-item.animate {
+     -webkit-transform: translateY(200px);
+     transform: translateY(200px);
+     -webkit-animation: moveUp 0.65s ease forwards;
+     animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+     0% { }
+     100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+     0% { }
+     100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
 /******************************************
 /* RESPONSIVE                  
 /*******************************************/
 
 @media only screen and (max-width: 480px) {
+     
+     #header{
+     height: 100%;
+     }
+
      .centerAlign{
           text-align: center;
      }
@@ -316,8 +364,21 @@ p{
           height: 10px;
      }
 
+     #lastNav{
+          margin: 0px 0px 10px 0px;
+     }
+
      #banner{
           display: none;
+     }
+
+     #apptCallout{
+          background: white;
+          color: black;
+     }
+
+     .grid-item{
+          width: 100%;
      }
 }
 
